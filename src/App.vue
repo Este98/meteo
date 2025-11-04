@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { fetchMeteo } from "./services/meteo.js";
 
 const villes = [
@@ -27,6 +27,10 @@ async function chargerMeteo() {
     loading.value = false;
   }
 }
+
+onMounted(chargerMeteo);
+
+watch(ville, chargerMeteo);
 </script>
 
 <template>
@@ -39,7 +43,6 @@ async function chargerMeteo() {
         <select id="ville" v-model="ville" class="form-select w-auto">
           <option v-for="v in villes" :key="v.code" :value="v.code">{{ v.nom }}</option>
         </select>
-        <button type="button" class="btn btn-primary" @click="chargerMeteo">Charger</button>
       </div>
     </form>
 
