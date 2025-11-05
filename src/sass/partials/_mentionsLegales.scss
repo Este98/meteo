@@ -1,0 +1,21 @@
+@use "_fonts.scss";
+
+.mentions-legales{
+        font-family: "Tilt", Calibri, sans-serif;
+        color: hsl(232, 10%, 34%);
+        width: 450px;
+        margin: auto;
+
+    h1{
+        margin-bottom: 50px;
+    }
+
+    h2{
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+}
