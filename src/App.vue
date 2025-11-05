@@ -6,13 +6,13 @@
 
 <template>
   <header>
-    
-  <Header />
-    
+    <Header />
   </header>
 
   <main>
     <RouterView />
   </main>
+
   <FooterComponent />
+  
 </template>
