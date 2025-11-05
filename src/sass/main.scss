@@ -1,7 +1,9 @@
+@use "partials/_footer.scss";
 @use "partials/meteo";
 @use "partials/_mentionsLegales";
 @use "partials/_notFound";
 @use "partials/_aPropos";
+
 
 body {
     margin: 0;
