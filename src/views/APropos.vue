@@ -52,15 +52,8 @@ import { ref } from "vue";
 
 
 <style scoped>
-@font-face{
-    font-family: "Tilt";
-    src: url('../../public/fonts/TiltWarp.ttf')
-}
 
-.about{
-    font-family: "Tilt", Calibri, sans-serif;
-    color: hsl(232, 10%, 34%);
-    margin: 20px;
-}
+
+
 
 </style>
