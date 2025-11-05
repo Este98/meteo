@@ -1,0 +1,23 @@
+@use "_fonts.scss";
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* plein écran */
+  margin: 0;
+}
+
+.about {
+  font-family: "Tilt", Calibri, sans-serif;
+  color: hsl(232, 10%, 34%);
+  width: 800px;
+  font-size: large;
+}
+
+
+.team-photo{
+    text-align: center;
+    
+}
