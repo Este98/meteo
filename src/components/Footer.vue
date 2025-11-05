@@ -1,35 +1,48 @@
-<template>
-	<footer class="bg-light py-3 mt-4 border-top">
-		<div class="container d-flex flex-column align-items-center">
-			<nav aria-label="Footer navigation">
-				<ul class="list-unstyled d-flex justify-content-center gap-5 mb-0">
-					<li>
-						<a href="/mentions-legales" class="text-decoration-none text-muted">Mentions légales</a>
-					</li>
-					<li>
-						<a href="/a-propos" class="text-decoration-none text-muted">À propos</a>
-
-					</li>
-				</ul>
-
-			</nav>
-		</div>
-	</footer>
-</template>
-
-
 <script setup>
-import { ref } from 'vue';
+import { RouterLink } from 'vue-router'
 
-const year = new Date().getFullYear();
+const year = new Date().getFullYear()
 </script>
 
+<template>
+  <footer class="bg-light py-3 mt-4 border-top">
+    <div class="color-container">
+      <nav aria-label="Footer navigation">
+        <ul class="list-unstyled d-flex justify-content-center align-items-center gap-4 mb-0">
+          <li>
+            <RouterLink to="MentionsLegales" class="nav-link">Mentions légales</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="APropos" class="nav-link">À propos</RouterLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</template>
+
 <style scoped>
-footer a {
-  color: hsl(232, 29%, 44%);
+.color-container {
+  background-color: hsl(232 29% 44%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+
+  /* ✅ Centrage horizontal ET vertical */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-footer a:hover {
-	text-decoration: underline;
+/* Style des liens */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: hsl(232 40% 80%);
 }
 </style>

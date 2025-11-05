@@ -35,9 +35,6 @@ watch(ville, chargerMeteo);
 
 
 <template>
-<<<<<<< HEAD
-
-=======
   <div class="container py-4">
     <h1 class="text-center mb-4">🌦️ Météo — Gironde</h1>
 
@@ -74,7 +71,6 @@ watch(ville, chargerMeteo);
       </div>
     </div>
   </div>
->>>>>>> origin/team
 </template>
 
 
