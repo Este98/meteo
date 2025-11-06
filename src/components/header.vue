@@ -27,7 +27,7 @@
   align-items: center;
   margin-top: 150px;       
   padding: 20px 0;
-  height: 160px;             
+  height: 160px;          
 }
 
 /* conteneur vertical */
