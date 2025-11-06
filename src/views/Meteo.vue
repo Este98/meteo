@@ -49,9 +49,8 @@ watch(ville, chargerMeteo);
 
     <h2 class="title">{{ ville }}</h2>
 
-    <div class="mt-4">
-      <div v-if="loading" class="alert alert-secondary">Chargement...</div>
-      <div v-else-if="error" class="alert alert-danger">Erreur : {{ error }}</div>
+      <div v-if="loading" class="align-self">Chargement...</div>
+      <div v-else-if="error" class="align-self">Erreur : {{ error }}</div>
 
       <div v-else-if="meteo">
         <div class="container">
@@ -60,7 +59,7 @@ watch(ville, chargerMeteo);
             <h3 classe="card-title">Aujourd'hui</h3>
             <div class="row row-main">
               <img :src="meteo.current.icon" alt="meteo actuelle" width="64" height="64" />
-              <p>{{ meteo.current.tmp }}°C</p>
+              <p class="temp">{{ meteo.current.tmp }}°C</p>
               <div class="min-max">
                 <p class="min">Min <br> {{ meteo.current.tmin }}°C</p>
                 <p class="max">Max <br> {{ meteo.current.tmax }}°C</p>
@@ -93,5 +92,4 @@ watch(ville, chargerMeteo);
         </div> 
       </div>
     </div>
-  </div>
 </template>
