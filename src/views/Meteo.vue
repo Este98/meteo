@@ -55,17 +55,18 @@ watch(ville, chargerMeteo);
 
       <div v-else-if="meteo">
         <div class="container">
-          <div class="card main-card">
-            <h3 classe="card-title">Date</h3>
-            <div class="row">
+
+          <div class="main-card">
+            <h3 classe="card-title">Aujourd'hui</h3>
+            <div class="row row-main">
               <img :src="meteo.current.icon" alt="meteo actuelle" width="64" height="64" />
               <p>{{ meteo.current.tmp }}°C</p>
               <div class="min-max">
-                <p>Min <br> {{ meteo.current.tmin }}°C</p>
-                <p>Max <br> {{ meteo.current.tmax }}°C</p>
+                <p class="min">Min <br> {{ meteo.current.tmin }}°C</p>
+                <p class="max">Max <br> {{ meteo.current.tmax }}°C</p>
               </div>
             </div>
-            <div class="row">
+            <div class="row row-days">
               <p>Matin</p>
               <p>Midi</p>
               <p>Soir</p>
@@ -76,36 +77,20 @@ watch(ville, chargerMeteo);
               </div>
             </div>
           </div>
-          <div v-for="j in meteo.days" :key="j.day_long" class="row">
+          <div class="container-cards">
+          <div v-for="j in meteo.days" :key="j.day_long">
             <div class="card">
               <h3>{{ j.day_long }}</h3>
               <img :src="j.icon" :alt="j.condition" width="64" height="64" />
               <div class="row">
-                <p>{{ j.tmin }}°C</p>
-                <p>{{ j.tmax }}°C</p>
+                <p class="min">{{ j.tmin }}°C</p>
+                <p class="max">{{ j.tmax }}°C</p>
               </div>
             </div>
-
-          </div>
-        </div>
-
-
-
-        <div class="text-center mb-3">
-          <p>{{ meteo.current.condition }} — {{ meteo.current.tmp }}°C</p>
-          <img :src="meteo.current.icon" alt="meteo actuelle" width="64" height="64" />
-        </div>
-
-        <section class="row g-3">
-          <div v-for="j in meteo.days" :key="j.day_long" class="col-12 col-md-4">
-            <div class="card p-3 text-center">
-              <h5>{{ j.day_long }}</h5>
-              <img :src="j.icon" :alt="j.condition" width="64" height="64" />
-              <p>{{ j.tmin }}°C / {{ j.tmax }}°C</p>
-              <p class="text-muted">{{ j.condition }}</p>
             </div>
+
           </div>
-        </section>
+        </div> 
       </div>
     </div>
   </div>
