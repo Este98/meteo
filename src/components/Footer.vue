@@ -12,6 +12,9 @@ const year = new Date().getFullYear()
           <RouterLink to="MentionsLegales" class="nav-link">Mentions légales</RouterLink>
         </li>
         <li>
+            |
+        </li>
+        <li>
           <RouterLink to="APropos" class="nav-link">À propos de nous</RouterLink>
         </li>
       </ul>

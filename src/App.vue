@@ -1,14 +1,28 @@
 <script setup>
-  import { RouterView, RouterLink } from "vue-router";
-  import FooterComponent from "./components/Footer.vue";
+import { RouterView } from "vue-router";
+import FooterComponent from "./components/Footer.vue";
 </script>
 
 <template>
-  <header>
-  </header>
+  <div class="page">
+    <header></header>
 
-  <main>
-    <RouterView />
-  </main>
-  <FooterComponent/>
+    <main class="main">
+      <RouterView />
+    </main>
+
+    <FooterComponent />
+  </div>
 </template>
+
+<style scoped>
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+</style>

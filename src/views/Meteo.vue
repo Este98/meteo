@@ -22,7 +22,7 @@ async function chargerMeteo() {
   try {
     meteo.value = await fetchMeteo(ville.value);
   } catch (e) {
-    error.value = e.message;
+    error.value = "🌧️ Les données météo ne sont pas disponibles pour le moment.";
   } finally {
     loading.value = false;
   }
@@ -74,6 +74,4 @@ watch(ville, chargerMeteo);
 </template>
 
 
-<style scoped>
-
-</style>
+<style scoped></style>
