@@ -14,7 +14,7 @@
     font-family: "Tilt", Calibri, sans-serif;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;;
 
     .form-list {
         display: flex;
@@ -62,7 +62,7 @@
         align-items: center;
         margin: auto;
         gap: 1rem;
-        width: 1200px;
+        width: 100%;
 
         .main-card {
             @include card-style;
@@ -78,7 +78,7 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                gap: 5rem;
+                gap: 6rem;
 
                 .temp {
                     font-size: 1.2rem;
@@ -89,7 +89,7 @@
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    gap: 3rem;
+                    gap: 1.5rem;
 
                     .min {
                         color: $color-min;
@@ -102,7 +102,16 @@
             }
 
             .row-days {
-                gap: 6.5rem;
+                display: flex;
+                justify-content: space-around;
+                 gap: 7.8rem;
+               
+            }
+
+            .icons-hours {
+                display: flex;
+                justify-content: space-between;
+                padding-left: 0.8rem;
             }
 
         }

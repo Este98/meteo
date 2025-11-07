@@ -5,7 +5,7 @@ import HeaderComponent from "./components/header.vue";
 </script>
 
 <template>
-  <div class="page">
+  <div id="app">
     <header>
       <HeaderComponent />
     </header>
@@ -19,13 +19,16 @@ import HeaderComponent from "./components/header.vue";
 </template>
 
 <style scoped>
-.page {
+#app {
   display: flex;
   flex-direction: column;
-  
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .main {
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 </style>
