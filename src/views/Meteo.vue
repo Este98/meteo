@@ -61,8 +61,8 @@ watch(ville, chargerMeteo);
               <img :src="meteo.current.icon" alt="meteo actuelle" width="64" height="64" />
               <p class="temp">{{ meteo.current.tmp }}°C</p>
               <div class="min-max">
-                <p class="min">Min <br> {{ meteo.current.tmin }}°C</p>
-                <p class="max">Max <br> {{ meteo.current.tmax }}°C</p>
+                <p class="min">Min <br> {{ meteo.today_tmin }}°C</p>
+                <p class="max">Max <br> {{ meteo.today_tmax }}°C</p>
               </div>
             </div>
             <div class="row row-days">
@@ -70,7 +70,7 @@ watch(ville, chargerMeteo);
               <p>Midi</p>
               <p>Soir</p>
             </div>
-            <div class="row">
+            <div class="row icons-hours">
               <div v-for="i in meteo.icons_hours" :key="i.hour">
                 <img :src="i.icon" alt="meteo de {{ i.hour }}" width="64" height="64" />
               </div>

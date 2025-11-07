@@ -17,6 +17,9 @@ export async function fetchMeteo(villeCode) {
     tmax: d.tmax
   }));
 
+  const today = data.fcst_day_0;
+  const today_tmin = today.tmin;
+  const today_tmax = today.tmax;
   const today_hourly = today.hourly_data;
   const icons_hours = ["7H00", "12H00", "17H00"].map((time) => ({
     hour: time,
@@ -31,7 +34,9 @@ export async function fetchMeteo(villeCode) {
       icon: data.current_condition.icon
     },
     days,
-    icons_hours
+    icons_hours,
+    today_tmin,
+    today_tmax
   };
 }
 
